@@ -43,46 +43,19 @@
     <section id="hero" class="hero" aria-labelledby="hero-title">
         <div class="hero-content">
             <h1 id="hero-title">Domine as Redes Sociais e Faça Seu Negócio Explodir</h1>
-            <p>Descubra gestão profissional, conteúdo estratégico e campanhas que transformam seguidores em clientes.</p>
-            <a href="#contato" class="btn-primary" aria-label="Solicitar orçamento">Quero Crescer Meu Negócio</a>
+            <p class="hero-subtitle">Aumente suas vendas em 200% em 3 meses com estratégias comprovadas. Mais de 150 clientes satisfeitos!</p>
+            <div class="hero-urgency">Oferta Limitada: 20% de desconto para os primeiros 10 contatos!</div>
+            <a href="#contato" class="btn-primary" aria-label="Solicitar orçamento">Garanta Sua Consultoria Gratuita Agora</a>
         </div>
     </section>
 
-    <!-- Sobre a Empresa -->
+    <!-- Sobre a Empresa (Resumido) -->
     <section id="sobre" class="section">
         <div class="container">
-            <h2>Sobre Nós</h2>
-            <div class="about-content">
-                <p>Somos a <strong>UDE</strong>, uma agência de marketing digital dedicada a conectar marcas e pessoas de forma autêntica e impactante. Nossa equipe é formada por especialistas em redes sociais, anúncios, audiovisual e criação de conteúdos visuais, com um foco constante em inovação e relevância.</p>
-                <p>Acreditamos que comunicação estratégica, criativa e direcionada é o que realmente transforma uma marca. A UDE atua de forma estratégica para fortalecer a presença digital de empresas que desejam crescer, se destacar no mercado e construir uma comunicação consistente com seu público.</p>
-                <p>Desenvolvemos soluções completas de marketing digital, combinando planejamento estratégico, produção de conteúdo, gestão de redes sociais, campanhas de anúncios e produção audiovisual. Cada projeto é pensado de forma personalizada.</p>
-            </div>
+            <h2>Somos a UDE Agências</h2>
+            <p class="about-summary">Especialistas em marketing digital: gestão de redes sociais, anúncios e conteúdo estratégico. Conectamos marcas a pessoas de forma autêntica e impactante.</p>
         </div>
     </section>
-
-    <!-- Nossa Essência -->
-<section id="servicos" class="section bg-light">
-    <div class="container">
-        <h2>Nossa Essência</h2>
-        <div class="services-grid icons-top" role="list" aria-label="Visão, Missão e Valores">
-            <div class="service-card" tabindex="0" role="listitem" aria-labelledby="visao-title">
-                <div class="icon" aria-hidden="true"><i class="fas fa-lightbulb"></i></div>
-                <h3 id="visao-title">Visão</h3>
-                <p>Ser referência em marketing digital, criando conexões autênticas e resultados impactantes para nossos clientes.</p>
-            </div>
-            <div class="service-card" tabindex="0" role="listitem" aria-labelledby="missao-title">
-                <div class="icon" aria-hidden="true"><i class="fas fa-bullseye"></i></div>
-                <h3 id="missao-title">Missão</h3>
-                <p>Conectar negócios a pessoas com comunicação digital inovadora, estratégica e orientada a resultados.</p>
-            </div>
-            <div class="service-card" tabindex="0" role="listitem" aria-labelledby="valores-title">
-                <div class="icon" aria-hidden="true"><i class="fas fa-heart"></i></div>
-                <h3 id="valores-title">Valores</h3>
-                <p>Inovação constante, autenticidade nas conexões, compromisso com resultados reais e transparência total.</p>
-            </div>
-        </div>
-    </div>
-</section>
 
     <!-- Benefícios -->
     <section id="beneficios" class="services-section">
@@ -168,18 +141,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"O melhor investimento que fizemos este ano. O ROI foi imediato e a equipe sempre disponível."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">👤</div>
-                        <div class="author-info">
-                            <strong>Fernanda Costa</strong>
-                            <span>Diretora, ModaViva</span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -211,9 +172,41 @@
         </div>
     </section>
 
-    <!-- FAQ -->
-    <section id="faq" class="section bg-light">
+    <!-- Rodapé -->
+    <footer>
         <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>UDE AGÊNCIAS</h3>
+                    <p>O melhor para o seu negócio crescer</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#sobre">Sobre</a>
+                    <a href="#servicos">Serviços</a>
+                    <a href="#contato">Contato</a>
+                    <a href="#" onclick="openFAQModal()">Perguntas Frequentes</a>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram" data-tooltip="Siga-nos no Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/+5521965651221" aria-label="WhatsApp" data-tooltip="Fale conosco no WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <button class="back-to-top" onclick="scrollToTop()" aria-label="Voltar ao topo">
+                    <i class="fas fa-arrow-up"></i> Voltar ao Topo
+                </button>
+            </div>
+            <p class="copyright">&copy; 2025 UDE AGÊNCIAS. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botão WhatsApp Flutuante -->
+    <a href="https://wa.me/+5521965651221?text=Olá! Gostaria de saber mais sobre os serviços da UDE Agências." class="whatsapp-float" target="_blank" aria-label="Falar no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- FAQ Modal -->
+    <div id="faqModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeFAQModal()">&times;</span>
             <h2>Perguntas Frequentes</h2>
             <div class="faq-grid">
                 <div class="faq-item">
@@ -245,35 +238,7 @@
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Rodapé -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>UDE AGÊNCIAS</h3>
-                    <p>O melhor para o seu negócio crescer</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#sobre">Sobre</a>
-                    <a href="#servicos">Serviços</a>
-                    <a href="#contato">Contato</a>
-                </div>
-                <div class="social-links">
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                   
-                </div>
-            </div>
-            <p class="copyright">&copy; 2025 UDE AGÊNCIAS. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-
-    <!-- Botão WhatsApp Flutuante -->
-    <a href="https://wa.me/+5521965651221?text=Olá! Gostaria de saber mais sobre os serviços da UDE Agências." class="whatsapp-float" target="_blank" aria-label="Falar no WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    </div>
 
     <script src="script-fixed.js"></script>
 </body>

@@ -535,4 +535,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ========================================
+    // 22. MODAL FAQ
+    // ========================================
+    window.openFAQModal = () => {
+        document.getElementById('faqModal').style.display = 'block';
+    };
+
+    window.closeFAQModal = () => {
+        document.getElementById('faqModal').style.display = 'none';
+    };
+
+    // Fechar modal ao clicar fora
+    window.onclick = (event) => {
+        const modal = document.getElementById('faqModal');
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    };
+
 });

@@ -117,7 +117,9 @@ header {
 }
 
 .btn-nav:hover {
-    background: var(--cor-destaque);
+    background: #fff;
+    color: var(--cor-primaria) !important;
+    border: 2px solid var(--cor-primaria);
     transform: scale(1.05);
 }
 
@@ -190,11 +192,27 @@ header {
     line-height: 1.1;
 }
 
-.hero-content p {
-    font-size: 1.2rem;
+.hero-subtitle {
+    font-size: 1.4rem;
     color: #ddd;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.hero-urgency {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: 600;
     margin-bottom: 2rem;
-    line-height: 1.5;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
 }
 
 /* ========================================
@@ -239,6 +257,15 @@ header {
     margin-bottom: 20px;
     font-size: 1.1rem;
     color: #555;
+}
+
+.about-summary {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
 }
 
 /* ========================================
@@ -406,7 +433,7 @@ header {
    ======================================== */
 .testimonials-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 30px;
 }
 
@@ -575,6 +602,160 @@ header {
 
 .faq-answer p {
     padding: 20px;
+}
+
+/* ========================================
+   RODAPÉ
+   ======================================== */
+footer {
+    background: linear-gradient(135deg, var(--cor-secundaria) 0%, rgba(47, 33, 185, 0.1) 100%);
+    padding: 60px 20px;
+    border-top: 1px solid var(--cor-borda);
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(47,33,185,0.05)"/></svg>') repeat;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-brand {
+    text-align: center;
+}
+
+.footer-brand h3 {
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.footer-links a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    transition: var(--transicao);
+}
+
+.footer-links a:hover {
+    color: var(--cor-primaria);
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.social-links a {
+    color: var(--cor-texto);
+    font-size: 1.5rem;
+    transition: var(--transicao);
+    display: inline-block;
+    padding: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.social-links a:hover {
+    color: var(--cor-primaria);
+    transform: scale(1.2) rotate(10deg);
+    box-shadow: 0 4px 15px rgba(47, 33, 185, 0.3);
+}
+
+.social-links a:hover {
+    color: var(--cor-primaria);
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* ========================================
+   MODAL FAQ
+   ======================================== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+
+.back-to-top {
+    background: var(--cor-primaria);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transicao);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 20px auto 0;
+    box-shadow: 0 4px 15px rgba(47, 33, 185, 0.3);
+}
+
+.back-to-top:hover {
+    background: var(--cor-destaque);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(47, 33, 185, 0.5);
+}
+
+.back-to-top:active {
+    transform: translateY(0);
 }
 
 /* ========================================
